@@ -8,13 +8,13 @@
 
 how to reproduce:
 
-- 1. mvn spring-boot:run
-- 2. open http://localhost:8080
-- 3. click link `/books/webapp` below Web Applications session.
-- 4. click `Go` button. then you can see the error.
-- 5. open `cat-service.cds`, comment out `@odata.draft.enabled` on `Category` projection entity and re-run the application test it again, click on `Category Code` header column and select `Group By` `Category Code` everything works fine.
+1. mvn spring-boot:run
+2. open http://localhost:8080
+3. click link `/books/webapp` below Web Applications session.
+4. click `Go` button. then you can see the error.
+5. open `cat-service.cds`, comment out `@odata.draft.enabled` on `Category` projection entity and re-run the application test it again, click on `Category Code` header column and select `Group By` `Category Code` everything works fine.
 
-Even though not using `Associations & Compositions` between `Books` and `Category` entities, `@odata.draft.enabled` still conflict with @Aggregation.CustomAggregate. See the error output as below:
+Even though not using `Associations & Compositions` between `Books` and `Category` entities, `@odata.draft.enabled` still conflict with `@Aggregation.CustomAggregate`. See the error output as below:
 
 ```
 2024-04-18T18:11:23.506+08:00  INFO 27480 --- [nio-8080-exec-9] c.s.c.a.o.v4.processors.CdsProcessor     : Exception marked the ChangeSet 5 as cancelled: Cannot convert {"SELECT":{"from":{"ref":["CatalogService.Books"]},"columns":[{"ref":["ID"],"as":"ID"},{"ref":["category_code"],"as":"category_code"},{"ref":["title"],"as":"title"},{"func":"SUM","args":[{"ref":["stock"]}],"as":"stock"}],"groupBy":[{"ref":["ID"],"as":"ID"},{"ref":["category_code"],"as":"category_code"},{"ref":["title"],"as":"title"}]}} to StructuredTypeRef (service 'CatalogService', event 'READ', entity 'CatalogService.Books')
