@@ -1,6 +1,7 @@
 ## cap java @odata.draft.enabled conflict with @Aggregation.CustomAggregate
 
 > https://cap.cloud.sap/docs/advanced/fiori#draft-support
+
 > https://cap.cloud.sap/docs/advanced/odata#custom-aggregates
 
 ### issue description
