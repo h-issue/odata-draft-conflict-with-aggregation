@@ -1,3 +1,7 @@
+### **Update**
+
+Separating the readonly `Books` entity from `cat-service.cds` into `cat-service-ro.cds` the problem is resolved.
+
 ## cap java @odata.draft.enabled conflict with @Aggregation.CustomAggregate
 
 > https://cap.cloud.sap/docs/advanced/fiori#draft-support

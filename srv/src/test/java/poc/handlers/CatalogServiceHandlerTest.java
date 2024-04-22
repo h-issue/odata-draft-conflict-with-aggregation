@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import cds.gen.catalogservice.Books;
+import cds.gen.catalogservicero.Books;
 
 class CatalogServiceHandlerTest {
 

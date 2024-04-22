@@ -5,8 +5,8 @@
   "license": "ISC",
   "repository": "<Add your repository here>",
   "sapux": [
-    "app/books",
-    "app/category"
+    "app/category",
+    "app/books"
   ],
   "devDependencies": {
     "@sap/ux-specification": "^1.120.8"
